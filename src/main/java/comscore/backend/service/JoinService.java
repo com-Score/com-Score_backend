@@ -24,6 +24,6 @@ public class JoinService {
             throw new IllegalArgumentException("이미 존재하는 이메일입니다.");
         }
 
-        userRepository.save(UserConverter.toUser(username, bCryptPasswordEncoder.encode(password), nickName, "GUEST"));
+        userRepository.save(UserConverter.toUser(username, bCryptPasswordEncoder.encode(password), nickName, "ADMIN"));
     }
 }

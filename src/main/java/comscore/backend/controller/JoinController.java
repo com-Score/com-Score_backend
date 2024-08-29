@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class JoinController {
     private JoinService joinService;
 
-    @PostMapping("/api/users/join")
+    @PostMapping("/join")
     public ApiResponse<String> joinProcess(@RequestBody JoinRequestDTO joinRequestDTO) {
         joinService.joinProcess(joinRequestDTO);
         return ApiResponse.ok("회원 가입 완료", "");
